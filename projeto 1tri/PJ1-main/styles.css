@@ -1,0 +1,371 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 16px; /* Tamanho padrão da fonte */
+}
+
+/* Menu de Acessibilidade */
+#accessibility-menu {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#accessibility-menu button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+/* Cabeçalho */
+header {
+    background: url('guaratubaerea.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 150px 20px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Menu de Navegação */
+nav {
+    position: fixed; /* Fixa o menu no topo da página */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    padding: 10px;
+    text-align: center;
+    z-index: 999;
+    transform: scale(1); /* Garante que o menu não seja afetado pelo zoom */
+    transform-origin: top left; /* Mantém o menu no topo da página */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Navegação */
+nav {
+    background: #333;
+    padding: 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Seções */
+section {
+    padding: 50px 20px;
+    margin: 20px 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+section .content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+section img {
+    max-width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Formulário de Contato */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    margin-top: 15px;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #555;
+}
+
+/* Rodapé */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Alto Contraste */
+.high-contrast {
+    background-color: black;
+    color: white;
+}
+
+.high-contrast header {
+    background-color: #000;
+    color: #fff;
+}
+
+.high-contrast nav {
+    background-color: #000;
+}
+
+.high-contrast footer {
+    background-color: #000;
+}
+
+.high-contrast section h2 {
+    color: #fff;
+}
+
+.high-contrast section p {
+    color: #ccc;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+
+    section .content {
+        flex-direction: column;
+    }
+
+    section img {
+        max-width: 100%;
+    }
+}
+
+/* ===== NOVOS ESTILOS ===== */
+
+/* Lightbox */
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    text-align: center;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    margin-top: 5%;
+    border-radius: 10px;
+}
+
+#close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#close-lightbox:hover {
+    color: #ffcc00;
+}
+
+/* Zoom Global */
+body * {
+    font-size: inherit;
+}
+
+button, input, textarea {
+    font-size: initial;
+}
+
+/* Galeria de Problemas e Soluções */
+.problems-grid, .solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.problem-card, .solution-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.problem-card:hover, .solution-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.problem-card img, .solution-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.problem-card h3, .solution-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.problem-card p, .solution-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.problem-card ul, .solution-card ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: #555;
+}
+
+.problem-card ul li, .solution-card ul li {
+    margin-bottom: 5px;
+}
+
+/* Responsividade para Novas Seções */
+@media (max-width: 768px) {
+    .problems-grid, .solutions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .problem-card, .solution-card {
+        padding: 15px;
+    }
+}
+
+/* Alto Contraste para Novas Seções */
+.high-contrast .problem-card, .high-contrast .solution-card {
+    background-color: #222;
+    color: white;
+}
+
+.high-contrast .problem-card h3, .high-contrast .solution-card h3,
+.high-contrast .problem-card p, .high-contrast .solution-card p,
+.high-contrast .problem-card ul, .high-contrast .solution-card ul {
+    color: white;
+}
+
+.high-contrast .problem-card:hover, .high-contrast .solution-card:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
